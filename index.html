@@ -265,6 +265,7 @@ async function startApp(){
   let saved=null;try{saved=localStorage.getItem("engliUser")}catch(e){}
   if(saved)await loadDash();else show("login");
 }
+  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
 </body>
 </html>
